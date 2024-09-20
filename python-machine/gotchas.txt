@@ -1,0 +1,13 @@
+gotchas:
+
+initial lookup returning multiple players with same name
+
+e.g.
+>>> playerid_lookup('ramírez', 'josé')
+  name_last name_first  key_mlbam key_retro  key_bbref  key_fangraphs  mlb_played_first  mlb_played_last
+0   ramírez       josé     542432  ramij004  ramirjo02          10171            2014.0           2018.0
+1   ramírez       josé     608070  ramij003  ramirjo01          13510            2013.0           2024.0
+
+
+so there you see the issue
+what we can do--since it's js!--is use some sort of drop down for the user to fine-tune their search term
